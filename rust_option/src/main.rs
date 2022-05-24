@@ -10,6 +10,10 @@ fn main() {
 
 	scream_if_none(Some(12));
 	scream_if_none(None);
+
+	use_unwrap(Some(75));
+	// Uncomment this line for a crash!
+	// use_unwrap(None);
 }
 
 fn unpack_option_1(x: Option<i32>) {
@@ -53,4 +57,13 @@ fn scream_if_none(x: Option<i32>) {
 	if x.is_none() {
 		println!("scream_if_none got a None!! AAAAAAHHHHHH");
 	}
+}
+
+fn use_unwrap(x: Option<i32>) {
+	// If you KNOW that an Option is Some, you can use .unwrap() to get the value out of it.
+
+	// But if you call .unwrap() on a None value, your program crashes! This is the closest thing
+	// Rust has to a NullPointerException. For that reason, .unwrap() is kind of frowned upon in
+	// cases where you are not absolutely 100% sure that the value is Some.
+	println!("use_unwrap: x = {}", x.unwrap());
 }
