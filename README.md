@@ -35,8 +35,5 @@ The Rust examples are in folders. Just `cd` into the folder and `cargo run` to t
 	- Demonstrates a simple mathematical AST that can be displayed and even evaluated.
 - `parsing_lisp/`
 	- A **recursive-descent** parser that parses a very simplified Lisp dialect.
-
-<!--
 - `parsing_math/`
 	- A **bottom-up** parser that parses mathematical expressions with multiple levels of precedence, a unary operator, and a postfix operator.
--->
