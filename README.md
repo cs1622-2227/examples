@@ -37,3 +37,8 @@ The Rust examples are in folders. Just `cd` into the folder and `cargo run` to t
 	- A **recursive-descent** parser that parses a very simplified Lisp dialect.
 - `parsing_math/`
 	- A **bottom-up** parser that parses mathematical expressions with multiple levels of precedence, a unary operator, and a postfix operator.
+
+### Semantic analysis
+
+- `visit_names/`
+	- Shows a simplified version of the namechecking semantic analysis pass. Doesn't actually build the scope tree/symbol tables/decl map/use map, but does show how to write a recursive visit of the AST, and prints out enough information that you could see how those are built up.
